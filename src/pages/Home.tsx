@@ -32,6 +32,7 @@ function Home() {
             { id: "3", name: "Project C", time: "8h", progress: 90 },
           ]}
         />
+        {/* TODO ADD CARDS */}
       </div>
     </>
   );
