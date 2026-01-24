@@ -7,16 +7,24 @@ interface Project {
   progress: number;
 }
 
+interface Activity {
+  id: string;
+  name: string;
+  imageUrl: string[];
+}
+
 interface BreakDownCardProps {
   title?: string;
-  projects: Project[];
+  projects?: Project[];
+  activities?: Activity[];
   onViewAll?: () => void;
 }
 
 export const BreakDownCard = ({ 
   title = "Projects", 
   projects, 
-  onViewAll 
+  activities,
+  onViewAll
 }: BreakDownCardProps) => {
   return (
     <div className="bg-white rounded-2xl p-6 w-full">
@@ -28,7 +36,7 @@ export const BreakDownCard = ({
       </div>
 
       <div className="space-y-4">
-        {projects.map((project) => (
+        {projects && projects.map((project) => (
           <div
             key={project.id}
             className="flex items-center gap-4 bg-gray-50 rounded-2xl p-4"
@@ -56,6 +64,16 @@ export const BreakDownCard = ({
                   style={{ width: `${project.progress}%` }}
                 />
               </div>
+            </div>
+          </div>
+        ))}
+        {activities && activities.map((activity) => (
+          <div key={activity.id} className="flex items-center gap-4 border border-gray-100 rounded-2xl p-4">
+            <div className="bg-amber-100 p-3 rounded-xl">
+              <img src={activity.imageUrl[0]} alt={activity.name} className="w-6 h-6 rounded-full" />
+            </div>
+            <div className="flex-1">
+              <h3 className="text-lg font-semibold text-gray-900">{activity.name}</h3>
             </div>
           </div>
         ))}
