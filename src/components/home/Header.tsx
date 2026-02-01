@@ -1,11 +1,10 @@
-import { Menu, Bell, User } from "lucide-react";
+import { Bell, User } from "lucide-react";
 import { SearchBar } from "../ui/SearchBar";
 
 export const Header = () => {
   return (
-    <div className="flex flex-row items-center p-3 justify-between">
+    <div className="flex flex-row items-center bg-[#FFFFFF] p-3 justify-between">
       <div className="flex flex-row items-center">
-        <Menu className="w-5 h-5 m-4" />
         <h1 className="text-2xl font-semibold m-4">Dashboard</h1>
       </div>
       <div className="w-100">
