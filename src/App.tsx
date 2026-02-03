@@ -1,15 +1,8 @@
-import Home from "./pages/Home";
-import { Navbar } from "./components/ui/Navbar";
+import { RouterProvider } from "react-router-dom";
+import { router } from "./router";
 
 function App() {
-  return (
-    <div className="flex">
-      <Navbar />
-      <main className="ml-20 flex-1 transition-all duration-300">
-        <Home />
-      </main>
-    </div>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;
