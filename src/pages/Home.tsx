@@ -8,7 +8,7 @@ function Home() {
   return (
     <>
       <Header />
-      <div className="flex flex-col items-center gap-6 bg-[#F9F9F9] h-full p-6 rounded-tl-2xl">
+      <div className="flex flex-col items-center gap-6 bg-[#F9F9F9] h-full p-6 rounded-tl-2xl pt-25">
         <div className="flex flex-row items-center justify-between w-full p-2">
           <div className="flex flex-col gap-2">
             <h1 className="text-4xl font-medium text-gray-900">Today</h1>

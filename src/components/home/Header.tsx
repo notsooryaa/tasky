@@ -3,7 +3,7 @@ import { SearchBar } from "../ui/SearchBar";
 
 export const Header = () => {
   return (
-    <div className="flex flex-row items-center bg-[#FFFFFF] p-3 justify-between">
+    <div className="fixed top-0 left-0 right-0 ml-20 flex flex-row items-center bg-[#FFFFFF] p-3 justify-between">
       <div className="flex flex-row items-center">
         <h1 className="text-2xl font-semibold m-4">Dashboard</h1>
       </div>

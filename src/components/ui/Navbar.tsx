@@ -7,7 +7,7 @@ import {
   Settings
 } from 'lucide-react';
 import { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link } from '@tanstack/react-router';
 
 interface NavItem {
   id: string;
@@ -38,7 +38,7 @@ export const Navbar = () => {
       onMouseEnter={() => setIsExpanded(true)}
       onMouseLeave={() => setIsExpanded(false)}
     >
-      <div className="p-6 flex items-center justify-center transition-all duration-200 ease-in-out">
+      <div className="p-6 flex items-center justify-center">
         <h1 className={`
           font-bold text-center
           transition-all duration-300 text-2xl
@@ -59,15 +59,17 @@ export const Navbar = () => {
 
             return (
               <li key={item.id}>
-                <NavLink
+                <Link
                   to={item.path}
-                  className={({ isActive }) => `
+                  activeProps={{
+                    className: 'bg-[#000000]',
+                  }}
+                  inactiveProps={{
+                    className: 'hover:bg-gray-200',
+                  }}
+                  className={`
                     w-full flex items-center gap-3 px-4 py-3 rounded-lg
                     transition-all duration-200 ease-in-out
-                    ${isActive
-                      ? 'bg-[#000000]'
-                      : 'hover:bg-gray-200'
-                    }
                   `}
                   title={item.label}
                 >
@@ -87,7 +89,7 @@ export const Navbar = () => {
                       </span>
                     </>
                   )}
-                </NavLink>
+                </Link>
               </li>
             );
           })}
