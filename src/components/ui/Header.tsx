@@ -1,11 +1,16 @@
 import { Bell, User } from "lucide-react";
-import { SearchBar } from "../ui/SearchBar";
+import { SearchBar } from "./SearchBar";
+import { headerPages } from "../../utils/HeaderHelper";
 
-export const Header = () => {
+interface HeaderProps {
+  page: keyof typeof headerPages;
+}
+
+export const Header = ({ page }: HeaderProps) => {
   return (
     <div className="fixed top-0 left-0 right-0 ml-20 flex flex-row items-center bg-[#FFFFFF] p-3 justify-between">
       <div className="flex flex-row items-center">
-        <h1 className="text-2xl font-semibold m-4">Dashboard</h1>
+        <h1 className="text-2xl font-semibold m-4">{headerPages[page]}</h1>
       </div>
       <div className="w-100">
         <SearchBar />

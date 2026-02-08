@@ -1,13 +1,17 @@
 import { ActivityCard } from "../components/home/ActivityCard";
 import { BreakDownCard } from "../components/home/BreakDownCard";
-import { Header } from "../components/home/Header";
+import { Header } from "../components/ui/Header";
 import { TimeTrackerButton } from "../components/home/TimeTrackerButton";
 import { ArrowDownToLine } from "lucide-react";
+import { useLocation } from "@tanstack/react-router";
+import type { headerPages } from "../utils/HeaderHelper";
 
 function Home() {
+  const location = useLocation();
+  const path = location.pathname;
   return (
     <>
-      <Header />
+      <Header page={path as keyof typeof headerPages} />
       <div className="flex flex-col items-center gap-6 bg-[#F9F9F9] h-full p-6 rounded-tl-2xl pt-25">
         <div className="flex flex-row items-center justify-between w-full p-2">
           <div className="flex flex-col gap-2">
