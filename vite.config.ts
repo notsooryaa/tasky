@@ -4,7 +4,7 @@ import react from '@vitejs/plugin-react-swc'
 import { tanstackRouter } from '@tanstack/router-vite-plugin'
 
 export default defineConfig({
-  base: '/tasky/',
+  base: '/',
   plugins: [
     tanstackRouter({
       target: 'react',
