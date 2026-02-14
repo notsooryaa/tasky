@@ -2,3 +2,4 @@
 2. Get Design for remaining pages and mobile view
 3. Add dark mode
 5: rework design
+6. Learn FIGMAA (😭😭😭)
