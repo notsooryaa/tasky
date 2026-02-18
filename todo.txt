@@ -1,5 +1,4 @@
 1. Deploy in vercel (deployed but site not visible) - Done ☑️
 2. Get Design for remaining pages and mobile view
 3. Add dark mode
-5: rework design
-6. Learn FIGMAA (😭😭😭)
+4. Implement API calls
