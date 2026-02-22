@@ -1,6 +1,6 @@
 export const headerPages = {
     '/': "Dashboard",
-    '/reports': "Reports",
+    '/report': "Reports",
     '/timesheets': "Timesheet",
     '/todo': "To Do",
     '/settings': "Settings",
