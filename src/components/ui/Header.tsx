@@ -8,7 +8,7 @@ interface HeaderProps {
 
 export const Header = ({ page }: HeaderProps) => {
   return (
-    <div className="fixed top-0 left-0 right-0 ml-20 flex flex-row items-center bg-[#FFFFFF] p-3 justify-between">
+    <div className="fixed top-0 left-0 right-0 z-50 ml-20 flex flex-row items-center justify-between bg-[#FFFFFF] p-3">
       <div className="flex flex-row items-center">
         <h1 className="text-2xl font-semibold m-4">{headerPages[page]}</h1>
       </div>

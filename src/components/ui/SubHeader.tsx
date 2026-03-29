@@ -39,7 +39,7 @@ const SubHeader = () => {
     };
 
     return (
-        <div className="flex items-center justify-between px-6 py-3 bg-white border-b border-gray-100">
+        <div className="flex items-center justify-between px-6 py-3 bg-white rounded-2xl">
             <div className="flex items-center gap-4">
                 <button
                     onClick={handleToday}

@@ -1,19 +1,28 @@
 import { MoreHorizontal } from 'lucide-react';
 
-export const TeamMembersCard = () => {
+type TeamMembersCardProps = {
+    name?: string;
+    role?: string;
+    avatarText?: string;
+    note?: string;
+};
+
+export const TeamMembersCard = ({
+    name = 'Sooryaa VR',
+    role = 'Developer',
+    avatarText = 'SV',
+    note = '8 teammates checked in today',
+}: TeamMembersCardProps) => {
     return (
-        <div className="bg-white rounded-[40px] p-8 flex items-center justify-between shadow-[0_8px_30px_rgb(0,0,0,0.04)] w-full max-w-2xl cursor-pointer hover:bg-gray-50 transition-all duration-300">
+        <div className="bg-white rounded-[32px] p-6 sm:p-8 flex items-center justify-between shadow-[0_16px_40px_rgba(15,23,42,0.06)] w-full border border-slate-100 transition-all duration-300 hover:-translate-y-0.5">
             <div className="flex items-center gap-6">
-                <div className="flex items-center justify-center w-16 h-16">
-                    <img
-                        src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=128&h=128&fit=crop"
-                        alt="Sooryaa VR"
-                        className="w-full h-full rounded-2xl object-cover shadow-sm"
-                    />
+                <div className="flex h-16 w-16 items-center justify-center rounded-[22px] bg-linear-to-br from-[#1F2937] to-[#4B5563] text-xl font-semibold text-white shadow-sm">
+                    {avatarText}
                 </div>
                 <div className="flex flex-col">
-                    <h2 className="text-3xl font-bold text-gray-900">Sooryaa VR</h2>
-                    <p className="text-gray-500 font-medium">Developer</p>
+                    <h2 className="text-2xl font-bold text-gray-900 sm:text-3xl">{name}</h2>
+                    <p className="text-gray-500 font-medium">{role}</p>
+                    <p className="mt-2 text-sm text-slate-400">{note}</p>
                 </div>
             </div>
 

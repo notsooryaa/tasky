@@ -31,7 +31,7 @@ export const Navbar = () => {
   return (
     <nav
       className={`
-        fixed left-0 top-0 h-screen bg-[#FFFFFF] text-white flex flex-col z-50
+        fixed left-0 top-0 h-screen bg-[#FFFFFF] text-white flex flex-col z-60
         transition-all duration-300 ease-in-out
         ${isExpanded ? 'w-64' : 'w-20'}
       `}
